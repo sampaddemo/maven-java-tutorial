@@ -5,7 +5,7 @@ pipeline {
 			stage('Build') {
 				steps {
 					git credentialsId: 'git-credential', url: 'https://github.com/sampaddemo/maven-java-tutorial'
-					sh ' ./mvn clean compile
+					sh './mvn clean compile'
 				}
 
 
@@ -13,7 +13,7 @@ pipeline {
 
 			stage('Test') {
 				steps {
-					sh './mvn test
+					sh './mvn test'
 				}
 
 				post {
